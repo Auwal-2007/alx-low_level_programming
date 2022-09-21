@@ -1,4 +1,4 @@
-#include "main.h"
+nclude "main.h"
 
 
 
@@ -9,7 +9,6 @@
  *   *
  *
  *    * @n: pointer integer
- *
  */
 
 void reset_to_98(int *n)
