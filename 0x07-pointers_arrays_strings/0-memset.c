@@ -1,58 +1,42 @@
-/*                                                                                                                                   
+#include "main.h"
 
- * File: 0-memset.c                                                                                                                  
 
- * Auth: not                                                                                                                         
 
- */                                                                                                                                  
+/**
 
-                                                                                                                                     
+ * *_memset - fills memory with a constant byte
 
-#include "main.h"                                                                                                                    
+ * @s: memory area to be filled
 
-                                                                                                                                     
+ * @b: char to copy
 
-/**                                                                                                                                  
+ * @n: number of times to copy b
 
- * _memset - Fills the first n bytes of the memory area                                                                              
+ *
 
- *          pointed to by @s with the constant byte @c.                                                                              
+ * Return: pointer to the memory area s
 
- * @s: A pointer to the memory area to be filled.                                                                                    
+ */
 
- * @c: The character to fill the memory area with.                                                                                   
+char *_memset(char *s, char b, unsigned int n)
 
- * @n: The number of bytes to be filled.                                                                                             
+{
 
- * description _memset: over there                                                                                                   
+	unsigned int i;
 
- *                                                                                                                                   
 
- * Return: A pointer to the filled memory area @s.                                                                                   
 
- *                                                                                                                                   
+	for (i = 0; i < n; i++)
 
- */                                                                                                                                  
+	{
 
-void *_memset(void *s, int c, size_t n)                                                                                              
+		s[i] = b;
 
-{                                                                                                                                    
+	}
 
-        unsigned int index;                                                                                                          
 
-        unsigned char *memory = s, value = c;                                                                                        
 
-                                                                                                                                     
-
-        for (index = 0; index < n; index++)                                                                                          
-
-                memory[index] = value;                                                                                               
-
-                                                                                                                                     
-
-        return (memory);                                                                                                             
+	return (s);
 
 }
-
-
 
