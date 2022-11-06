@@ -1,50 +1,34 @@
 #include <stdio.h>
+
 /**
-* main - main block
-* Description: Print all possible combinations of two two-digit numbers.
-* Numbers should range from 0 to 99.
-* The two numbers should be separated by a space.
-* All numbers should be printed with two digits. 1 should be printed as 01.
-* Combination of numbers must be separated by a comma followed by a space.
-* Combinations of numbers should be printed in ascending order.
-* `00 01` and `01 00` are considered as the same combination.
-* You can only use `putchar` to print to console.
-* You can only use `putchar` up to 8 times.
-* You are not allowed to use any variable of type `char`.
-* Return: 0
-*/
+ * main - Prints all possible combinations of two two-digit numbers,
+ * ranging from 0-99, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-int i, j;
-int a, b, c, d; 
+	int num1, num2;
 
-for (i = 0; i < 100; i++)
-{
-a = i / 10; /* doubles fnum */
-b = i % 10; /* singles fnum */ 
+	for (num1 = 0; num1 <= 98; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 
-for (j = 0; j < 100; j++)
-{
-c = j / 10; /* doubles snum */
-d = j % 10; /* singles snum */ 
+			if (num1 == 98 && num2 == 99)
+				continue;
 
-if (a < c || (a == c && b < d))
-{
-putchar(a + 0);
-putchar(b + 0);
-putchar(32);
-putchar(c + 0);
-putchar(d + 0); 
+			putchar(',');
+			putchar(' ');
+		}
+	}
 
-if (!(a == 9 && b == 8))
-{
-putchar(44);
-putchar(32);
-}
-}
-}
-}
-putchar(10); 
+	putchar('\n');
 
-return (0);
+	return (0);
 }

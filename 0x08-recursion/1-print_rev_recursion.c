@@ -5,7 +5,6 @@
  * @s: string
  * Return: no return.
  */
-
 void _print_rev_recursion(char *s)
 {
 	if (*s != '\0')
@@ -14,4 +13,3 @@ void _print_rev_recursion(char *s)
 		_putchar(*s);
 	}
 }
-

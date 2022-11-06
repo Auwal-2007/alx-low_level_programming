@@ -1,1 +1,1 @@
-0x07. C - Even more pointers, arrays and strings
+the readme file for the task 0x07-pointers_arrays_strings
